@@ -5,72 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House of Laura - Manga Reader</title>
     <style>
-        * { box-sizing: border-box; }
-        body { background-color: #080110; color: #ffffff; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 40px 0; }
-        .slide-container { width: 100%; max-width: 900px; min-height: 600px; background-color: #110520; border-radius: 16px; border: 2px solid rgba(255, 0, 127, 0.6); padding: 20px; display: flex; flex-direction: column; align-items: center; margin-bottom: 60px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; }
-        .tome-card { background: #110520; padding: 15px; border-radius: 10px; border: 2px solid #ff007f; text-align: center; }
-        .btn-next { background: linear-gradient(45deg, #ff007f, #b90064); color: white; padding: 14px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; margin: 10px; }
-        .manga-page { width: 100%; display: flex; justify-content: center; align-items: center; }
-        .manga-page img { max-width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); }
-        .soon-title { font-family: 'Kanit', sans-serif; font-size: 80px; font-weight: 900; color: #ff007f; margin: 0; text-transform: uppercase; }
-        .soon-subtitle { font-size: 20px; color: #00ffff; margin-top: 10px; }
+        body { background-color: #050505; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
+        
+        /* Conteneur principal plus élégant */
+        .page-wrapper { width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        
+        .slide-container { width: 100%; background: #121212; padding: 30px; border-radius: 25px; border: 1px solid #333; display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%; }
+        .tome-card { background: #1a1a1a; padding: 20px; border-radius: 20px; border: 1px solid #444; text-align: center; transition: transform 0.3s; }
+        .tome-card:hover { transform: scale(1.02); border-color: #ff007f; }
+        
+        .btn-next { background: #ff007f; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; cursor: pointer; display: inline-block; margin-top: 20px; transition: background 0.3s; }
+        .btn-next:hover { background: #ff3399; }
+        .btn-secondary { background: #333; color: white; }
+        
+        .manga-page img { width: 100%; border-radius: 15px; }
+        h1 { font-size: 2.5em; margin-bottom: 20px; letter-spacing: 2px; color: #ff007f; }
     </style>
 </head>
 <body>
 
+<div class="page-wrapper">
     <!-- HUB (ACCUEIL) -->
     <div class="slide-container" id="hub">
-        <h1>House of Laura</h1>
+        <h1>HOUSE OF LAURA</h1>
         <div class="grid">
             <div class="tome-card">
                 <img src="cover hol.png" alt="Tome 1">
                 <a href="#page1_t1" class="btn-next">Lire Tome 1</a>
             </div>
             <div class="tome-card">
-                <img src="cover tome 2 hol.png" alt="Tome 2">
+                <img src="image_4a6112.jpg" alt="Tome 2">
                 <a href="#cover_t2" class="btn-next">Lire Tome 2</a>
             </div>
         </div>
     </div>
 
-    <!-- TOME 1 (8 PAGES) -->
-    <div class="slide-container" id="page1_t1"><div class="manga-page"><img src="page 1 hol.png"></div><a href="#page2_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page2_t1"><div class="manga-page"><img src="page 2 hol.png"></div><a href="#page3_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page3_t1"><div class="manga-page"><img src="page 3 hol.png"></div><a href="#page4_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page4_t1"><div class="manga-page"><img src="page 4 hol.png"></div><a href="#page5_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page5_t1"><div class="manga-page"><img src="page 5 hol.png"></div><a href="#page6_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page6_t1"><div class="manga-page"><img src="page 6 hol.png"></div><a href="#page7_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page7_t1"><div class="manga-page"><img src="page 7 hol.png"></div><a href="#page8_t1" class="btn-next">Suivant</a></div>
-    <div class="slide-container" id="page8_t1">
-        <div class="manga-page"><img src="page 8 hol.png"></div>
-        <div>
-            <a href="#hub" class="btn-next" style="background:#555;">Accueil</a>
-            <a href="#cover_t2" class="btn-next">Lire Tome 2</a>
-        </div>
+    <!-- TOME 1 (Exemple page 1, répète pour les autres) -->
+    <div class="slide-container" id="page1_t1">
+        <div class="manga-page"><img src="page 1 hol.png" alt="Page 1"></div>
+        <a href="#page2_t1" class="btn-next">Page suivante</a>
     </div>
 
     <!-- TOME 2 -->
     <div class="slide-container" id="cover_t2">
-        <div class="manga-page"><img src="cover tome 2 hol.png"></div>
-        <a href="#page1_t2" class="btn-next">Commencer Tome 2</a>
+        <div class="manga-page"><img src="image_4a6112.jpg" alt="Couverture Tome 2"></div>
+        <a href="#page1_t2" class="btn-next">Commencer le Tome 2</a>
     </div>
     
     <div class="slide-container" id="page1_t2">
-        <div class="manga-page"><img src="page 1 tome 2 hol.png"></div>
-        <a href="#soon_t2" class="btn-next">Suivant</a>
+        <div class="manga-page"><img src="page 1 tome 2 hol.png" alt="Page 1 Tome 2"></div>
+        <a href="#soon_t2" class="btn-next">Suite</a>
     </div>
 
-    <!-- SOON TOME 2 -->
+    <!-- SOON -->
     <div class="slide-container" id="soon_t2">
-        <div class="manga-page" style="flex-direction: column; padding: 40px 0; text-align: center;">
-            <h2 class="soon-title">SOON</h2>
-            <p class="soon-subtitle">La suite du Tome 2 arrive bientôt !</p>
-        </div>
-        <div class="nav-overlay">
-            <a href="#hub" class="btn-next">Retour Accueil</a>
-        </div>
+        <h2>À suivre...</h2>
+        <p>Le contenu arrive bientôt.</p>
+        <a href="#hub" class="btn-next btn-secondary">Retour à l'accueil</a>
     </div>
+</div>
 
 </body>
 </html>
