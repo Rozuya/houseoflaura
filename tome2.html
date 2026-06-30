@@ -2,52 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House of Laura - Tome 2</title>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
-        .container { width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
-        .slide { width: 100%; background: #121212; padding: 30px; border-radius: 25px; border: 1px solid #333; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); box-sizing: border-box; }
-        .btn { background: #ff007f; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #ff3399; }
-        .btn-secondary { background: #444; margin-left: 10px; }
-        .btn-secondary:hover { background: #666; }
-        img { width: 100%; border-radius: 15px; }
-        h2 { color: #ff007f; font-size: 2.5em; margin-bottom: 10px; }
-        p { font-size: 1.2em; color: #ccc; }
+        body { background-color: #050505; color: #ffffff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .slide { width: 100%; max-width: 800px; background: #121212; padding: 20px; border-radius: 20px; margin-bottom: 20px; text-align: center; }
+        .btn { background: #ff007f; color: white; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+        img { width: 100%; border-radius: 10px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <!-- COVER TOME 2 -->
-        <div class="slide" id="cover">
-            <img src="cover tome 2 hol.png" alt="Couverture Tome 2">
-            <br>
-            <a href="#page1" class="btn">Commencer le Tome 2</a>
-            <a href="index.html" class="btn btn-secondary">Retour Accueil</a>
-        </div>
-        
-        <!-- PAGES 1 À 8 -->
-        <div class="slide" id="page1"><img src="page 1 tome 2 hol.png" alt="Page 1"><br><a href="#page2" class="btn">Suivant</a></div>
-        <div class="slide" id="page2"><img src="page 2 tome 2 hol.png" alt="Page 2"><br><a href="#page3" class="btn">Suivant</a></div>
-        <div class="slide" id="page3"><img src="page 3 tome 2 hol.png" alt="Page 3"><br><a href="#page4" class="btn">Suivant</a></div>
-        <div class="slide" id="page4"><img src="page 4 tome 2 hol.png" alt="Page 4"><br><a href="#page5" class="btn">Suivant</a></div>
-        <div class="slide" id="page5"><img src="page 5 tome 2 hol.png" alt="Page 5"><br><a href="#page6" class="btn">Suivant</a></div>
-        <div class="slide" id="page6"><img src="page 6 tome 2 hol.png" alt="Page 6"><br><a href="#page7" class="btn">Suivant</a></div>
-        <div class="slide" id="page7"><img src="page 7 tome 2 hol.png" alt="Page 7"><br><a href="#page8" class="btn">Suivant</a></div>
-        
-        <!-- PAGE 8 & ANNONCE TOME 3 -->
-        <div class="slide" id="page8">
-            <img src="page 8 tome 2 hol.png" alt="Page 8">
-            <br><br>
-            <h2>TOME 3 DISPONIBLE EN AOÛT</h2>
-            <p>Restez actifs sur le Discord pour ne rien manquer !</p>
-            <a href="https://discord.gg/qj8JbVSZqQ" target="_blank" class="btn">Rejoindre le Discord</a>
-            <br><br>
-            <a href="index.html" class="btn btn-secondary">Retour Accueil</a>
-        </div>
-
+    <div class="slide" id="cover"><img src="cover tome 2 hol.png"><br><a href="#p1" class="btn">Commencer</a></div>
+    <div class="slide" id="p1"><img src="page 1 tome 2 hol.png"><br><a href="#p2" class="btn">Suivant</a></div>
+    <div class="slide" id="p2"><img src="page 2 tome 2 hol.png"><br><a href="#p3" class="btn">Suivant</a></div>
+    <div class="slide" id="p3"><img src="page 3 tome 2 hol.png"><br><a href="#p4" class="btn">Suivant</a></div>
+    <div class="slide" id="p4"><img src="page 4 tome 2 hol.png"><br><a href="#p5" class="btn">Suivant</a></div>
+    <div class="slide" id="p5"><img src="page 5 tome 2 hol.png"><br><a href="#p6" class="btn">Suivant</a></div>
+    <div class="slide" id="p6"><img src="page 6 tome 2 hol.png"><br><a href="#p7" class="btn">Suivant</a></div>
+    <div class="slide" id="p7"><img src="page 7 tome 2 hol.png"><br><a href="#p8" class="btn">Suivant</a></div>
+    <div class="slide" id="p8">
+        <img src="page 8 tome 2 hol.png">
+        <br><br>
+        <h2>TOME 3 DISPONIBLE EN AOÛT</h2>
+        <a href="https://discord.gg/qj8JbVSZqQ" target="_blank" class="btn">Rejoindre le Discord</a>
+        <br><a href="index.html" class="btn" style="background:#444">Retour Accueil</a>
     </div>
 </body>
 </html>
