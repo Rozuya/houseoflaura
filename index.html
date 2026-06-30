@@ -7,7 +7,7 @@
     <style>
         body { background-color: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
         .container { width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
-        .slide { width: 100%; background: #121212; padding: 30px; border-radius: 25px; border: 1px solid #333; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .slide { width: 100%; background: #121212; padding: 30px; border-radius: 25px; border: 1px solid #333; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); box-sizing: border-box; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%; }
         .card { background: #1a1a1a; padding: 20px; border-radius: 20px; border: 1px solid #444; }
         .btn { background: #ff007f; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; transition: 0.3s; }
@@ -21,64 +21,55 @@
 <body>
     <div class="container">
         
-        <!-- ACCUEIL (HUB) -->
         <div class="slide" id="hub">
             <h1>HOUSE OF LAURA</h1>
             <div class="grid">
                 <div class="card">
                     <img src="cover hol.jpg" alt="Couverture Tome 1">
-                    <a href="#page1" class="btn">Lire Tome 1</a>
+                    <br><a href="#page1" class="btn">Lire Tome 1</a>
                 </div>
                 <div class="card">
                     <img src="cover tome 2 hol.png" alt="Couverture Tome 2">
-                    <a href="tome2.html" class="btn">Lire Tome 2</a>
+                    <br><a href="tome2.html" class="btn">Lire Tome 2</a>
                 </div>
             </div>
         </div>
 
-        <!-- TOME 1 - PAGE 1 -->
         <div class="slide" id="page1">
             <img src="page 1 hol.jpg" alt="Page 1">
             <br><a href="#page2" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 2 -->
         <div class="slide" id="page2">
             <img src="page 2 hol.jpg" alt="Page 2">
             <br><a href="#page3" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 3 -->
         <div class="slide" id="page3">
             <img src="page 3 hol.jpg" alt="Page 3">
             <br><a href="#page4" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 4 -->
         <div class="slide" id="page4">
             <img src="page 4 hol.jpg" alt="Page 4">
             <br><a href="#page5" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 5 -->
         <div class="slide" id="page5">
             <img src="page 5 hol.jpg" alt="Page 5">
             <br><a href="#page6" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 6 -->
         <div class="slide" id="page6">
             <img src="page 6 hol.png" alt="Page 6">
             <br><a href="#page7" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 7 -->
         <div class="slide" id="page7">
             <img src="page 7 hol.png" alt="Page 7">
             <br><a href="#page8" class="btn">Suivant</a>
         </div>
 
-        <!-- TOME 1 - PAGE 8 (FIN DU TOME 1) -->
         <div class="slide" id="page8">
             <img src="page 8 hol.png" alt="Page 8">
             <br>
