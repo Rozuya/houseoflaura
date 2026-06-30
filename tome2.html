@@ -5,31 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House of Laura - Tome 2</title>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
-        .container { width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
-        .slide { width: 100%; background: #121212; padding: 30px; border-radius: 25px; border: 1px solid #333; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .btn { background: #ff007f; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #ff3399; }
-        .btn-secondary { background: #444; margin-left: 10px; }
-        .btn-secondary:hover { background: #666; }
-        img { width: 100%; border-radius: 15px; }
-        h2 { color: #ff007f; font-size: 2.5em; margin-bottom: 10px; }
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px; 
+            margin: 0; 
+            min-height: 100vh;
+        }
+        .container { 
+            width: 100%; 
+            max-width: 800px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slide { 
+            display: none; /* Cache toutes les pages par défaut */
+            width: 100%; 
+            background: #121212; 
+            padding: 30px; 
+            border-radius: 25px; 
+            border: 1px solid #333; 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            box-sizing: border-box;
+        }
+        /* Cette classe affiche uniquement la page active */
+        .slide.active { 
+            display: block; 
+        }
+        .btn { 
+            background: #ff007f; 
+            color: white; 
+            padding: 15px 40px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            display: inline-block; 
+            margin-top: 20px; 
+            transition: 0.3s; 
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        .btn:hover { 
+            background: #ff3399; 
+        }
+        .btn-secondary { 
+            background: #444; 
+            margin-left: 10px; 
+        }
+        .btn-secondary:hover { 
+            background: #666; 
+        }
+        img { 
+            width: 100%; 
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 15px; 
+        }
+        h2 { 
+            color: #ff007f; 
+            font-size: 2.5em; 
+            margin-bottom: 10px; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
         
         <!-- COVER TOME 2 -->
-        <div class="slide" id="cover">
+        <div class="slide active" id="cover">
             <img src="cover tome 2 hol.png" alt="Couverture Tome 2">
-            <br><a href="#page1" class="btn">Commencer le Tome 2</a>
+            <br>
+            <button onclick="naviguer('page1')" class="btn">Commencer le Tome 2</button>
             <a href="index.html" class="btn btn-secondary">Retour Accueil</a>
         </div>
         
         <!-- PAGE 1 TOME 2 -->
         <div class="slide" id="page1">
             <img src="page 1 tome 2 hol.png" alt="Page 1 Tome 2">
-            <br><a href="#soon" class="btn">Suivant</a>
+            <br>
+            <button onclick="naviguer('soon')" class="btn">Suivant</button>
+            <button onclick="naviguer('cover')" class="btn btn-secondary">Retour Cover</button>
         </div>
         
         <!-- SOON -->
@@ -40,5 +103,22 @@
         </div>
 
     </div>
+
+    <!-- Le petit script magique pour changer de page proprement -->
+    <script>
+        function naviguer(pageId) {
+            // On cache toutes les pages
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            // On affiche la page demandée
+            const cible = document.getElementById(pageId);
+            if (cible) {
+                cible.classList.add('active');
+            }
+            // On remonte automatiquement en haut de l'écran
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
